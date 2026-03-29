@@ -74,8 +74,16 @@ print("\nVolatility:", round(volatility, 4))
 
 
 
+# ==============================
+# 🔗 Correlation Heatmap
+# ==============================
+
 plt.figure(figsize=(8,6))
-sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
+
+numeric_df = df.select_dtypes(include=[np.number])
+
+sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm')
+
 plt.title('Correlation Matrix')
 plt.tight_layout()
 plt.savefig("eda/visualizations/correlation.png")
