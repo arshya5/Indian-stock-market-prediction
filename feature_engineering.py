@@ -14,23 +14,26 @@ for file in stocks:
 
     df = pd.read_csv(file)
 
-    # Convert Close to numeric
+   
+    df["Date"] = pd.date_range(start="2015-01-01", periods=len(df))
+
+    
     df["Close"] = pd.to_numeric(df["Close"], errors="coerce")
 
-    # Moving averages
-    df["MA10"] = df["Close"].rolling(10).mean()
-    df["MA50"] = df["Close"].rolling(50).mean()
+    
+    df["Lag1"] = df["Close"].shift(1)
+    df["Lag2"] = df["Close"].shift(2)
+    df["Lag3"] = df["Close"].shift(3)
 
-    # Return %
+    df["MA5"] = df["Close"].rolling(5).mean()
+    df["MA10"] = df["Close"].rolling(10).mean()
+
     df["Return"] = df["Close"].pct_change()
 
-    # Drop null rows
     df = df.dropna()
 
-    new_name = file.replace(".csv", "_features.csv")
+    df.to_csv(file.replace(".csv", "_features.csv"), index=False)
 
-    df.to_csv(new_name, index=False)
+    print("Saved:", file.replace(".csv", "_features.csv"))
 
-    print("Saved:", new_name)
-
-print("Feature engineering completed")
+print("Feature engineering done")
