@@ -1,3 +1,4 @@
+
 # Stock Market Exploratory Data Analysis | Trend and Volatility Insights (India)
 
 Exploratory analysis of Indian stock market data focusing on trend behavior, volatility dynamics, and return characteristics.
@@ -22,9 +23,9 @@ The objective of this project is to analyze historical stock data to better unde
 
 ## Stakeholders
 
-- Retail investors  
-- Financial analysts  
-- Market researchers  
+* Retail investors
+* Financial analysts
+* Market researchers
 
 ---
 
@@ -41,11 +42,69 @@ Visualizations were used extensively to support observations and make patterns e
 ## Technical Skills
 
 | Tool / Area   | Techniques Used                      |
-|---------------|------------------------------------|
+| ------------- | ------------------------------------ |
 | Python        | Pandas (time-series analysis), NumPy |
-| Visualization | Matplotlib, Seaborn, Plotly         |
-| Data Source   | yfinance API                        |
-| Deployment    | Streamlit                           |
+| Visualization | Matplotlib, Seaborn, Plotly          |
+| Data Source   | yfinance API                         |
+| Deployment    | Streamlit                            |
+
+---
+
+## Visual Analysis
+
+### Price Trend Over Time
+
+![Price Trend](visualizations/price_trend.png)
+
+This chart shows a clear long-term upward trajectory with intermittent sharp corrections. The noticeable drop around 2018 highlights a structural break, after which the market transitions into a new growth phase.
+
+---
+
+### Rolling Volatility (10-Day)
+
+![Volatility](visualizations/rolling_volatility.png)
+
+Volatility appears in distinct clusters rather than remaining constant. The sharp spike around 2018 indicates a period of heightened market instability, followed by gradual stabilization — supporting the idea of volatility clustering and mean reversion.
+
+---
+
+### Returns Distribution
+
+![Returns](visualizations/returns_distribution.png)
+
+The distribution is centered around zero, indicating that most daily price changes are small. However, the presence of long tails shows that extreme movements occur more frequently than expected, confirming fat-tailed behavior.
+
+---
+
+### Moving Averages
+
+![Moving Average](visualizations/moving_average.png)
+
+The moving averages closely follow the price trend while smoothing short-term noise. However, they visibly lag behind sudden price movements, reinforcing their role as confirmation indicators rather than predictive tools.
+
+---
+
+### Volume vs Price Relationship
+
+![Volume vs Price](visualizations/volume_vs_price.png)
+
+There is no strong linear relationship between volume and price. Data points are widely scattered, suggesting that price movements are influenced by multiple factors beyond trading volume alone.
+
+---
+
+### Cumulative Returns (Growth of ₹1)
+
+![Cumulative Returns](visualizations/cumulative_returns.png)
+
+Despite short-term fluctuations and drawdowns, cumulative returns show consistent long-term growth. This reinforces the presence of a sustained upward trend over time.
+
+---
+
+### Daily Returns Over Time
+
+![Returns Over Time](visualizations/returns_over_time.png)
+
+Returns fluctuate around zero with occasional sharp spikes, highlighting periods of market shocks and increased volatility.
 
 ---
 
@@ -71,50 +130,56 @@ Despite short-term noise, cumulative returns show a consistent long-term growth 
 
 ## Recommendations (Interpretation)
 
-- Focus on long-term trends rather than short-term fluctuations  
-- Be cautious during high-volatility periods  
-- Do not rely solely on volume for decision-making  
-- Use moving averages as confirmation tools rather than predictors  
+* Focus on long-term trends rather than short-term fluctuations
+* Be cautious during high-volatility periods
+* Do not rely solely on volume for decision-making
+* Use moving averages as confirmation tools rather than predictors
 
 ---
 
 ## Limitations
 
-- Based only on historical price and volume data  
-- No inclusion of macroeconomic or sentiment factors  
-- Forecasting model is basic and experimental  
+* Based only on historical price and volume data
+* No inclusion of macroeconomic or sentiment factors
+* Forecasting model is basic and experimental
 
 ---
 
 ## Next Steps
 
-- Integrate real-time stock data  
-- Add sentiment analysis (news, social media)  
-- Apply advanced models (LSTM, ARIMA)  
-- Expand to multiple stocks and sectors  
+* Integrate real-time stock data
+* Add sentiment analysis (news, social media)
+* Apply advanced models (LSTM, ARIMA)
+* Expand to multiple stocks and sectors
 
 ---
 
 ## Repository Structure
 
+```
 /data  
 /notebooks  
 /visualizations  
 app.py  
 requirements.txt  
 README.md  
+```
 
 ---
 
 ## Running the Project
 
+```
 git clone https://github.com/arshya5/Indian-stock-market-prediction.git  
 cd Indian-stock-market-prediction  
 pip install -r requirements.txt  
 streamlit run app.py  
+```
 
 ---
 
 ## Closing Note
 
 This project focuses on understanding financial markets through structured analysis rather than relying solely on complex modeling. It emphasizes clarity, interpretation, and the ability to extract meaningful insights from data.
+
+---
