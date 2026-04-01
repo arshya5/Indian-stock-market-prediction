@@ -54,7 +54,7 @@ Visualizations were used extensively to support observations and make patterns e
 
 ### Price Trend Over Time
 
-![Price Trend](visualizations/price_trend.png)
+![Price Trend](eda/visualizations/price_trend.png)
 
 This chart shows a clear long-term upward trajectory with intermittent sharp corrections. The noticeable drop around 2018 highlights a structural break, after which the market transitions into a new growth phase.
 
@@ -62,7 +62,7 @@ This chart shows a clear long-term upward trajectory with intermittent sharp cor
 
 ### Rolling Volatility (10-Day)
 
-![Volatility](visualizations/rolling_volatility.png)
+![Volatility](eda/visualizations/rolling_volatility.png)
 
 Volatility appears in distinct clusters rather than remaining constant. The sharp spike around 2018 indicates a period of heightened market instability, followed by gradual stabilization — supporting the idea of volatility clustering and mean reversion.
 
@@ -70,7 +70,7 @@ Volatility appears in distinct clusters rather than remaining constant. The shar
 
 ### Returns Distribution
 
-![Returns](visualizations/returns_distribution.png)
+![Returns](eda/visualizations/returns_distribution.png)
 
 The distribution is centered around zero, indicating that most daily price changes are small. However, the presence of long tails shows that extreme movements occur more frequently than expected, confirming fat-tailed behavior.
 
@@ -78,7 +78,7 @@ The distribution is centered around zero, indicating that most daily price chang
 
 ### Moving Averages
 
-![Moving Average](visualizations/moving_average.png)
+![Moving Average](eda/visualizations/moving_average.png)
 
 The moving averages closely follow the price trend while smoothing short-term noise. However, they visibly lag behind sudden price movements, reinforcing their role as confirmation indicators rather than predictive tools.
 
@@ -86,7 +86,7 @@ The moving averages closely follow the price trend while smoothing short-term no
 
 ### Volume vs Price Relationship
 
-![Volume vs Price](visualizations/volume_vs_price.png)
+![Volume vs Price](eda/visualizations/volume_vs_price.png)
 
 There is no strong linear relationship between volume and price. Data points are widely scattered, suggesting that price movements are influenced by multiple factors beyond trading volume alone.
 
@@ -94,7 +94,7 @@ There is no strong linear relationship between volume and price. Data points are
 
 ### Cumulative Returns (Growth of ₹1)
 
-![Cumulative Returns](visualizations/cumulative_returns.png)
+![Cumulative Returns](eda/visualizations/cumulative_returns.png)
 
 Despite short-term fluctuations and drawdowns, cumulative returns show consistent long-term growth. This reinforces the presence of a sustained upward trend over time.
 
@@ -102,7 +102,7 @@ Despite short-term fluctuations and drawdowns, cumulative returns show consisten
 
 ### Daily Returns Over Time
 
-![Returns Over Time](visualizations/returns_over_time.png)
+![Returns Over Time](eda/visualizations/returns_over_time.png)
 
 Returns fluctuate around zero with occasional sharp spikes, highlighting periods of market shocks and increased volatility.
 
